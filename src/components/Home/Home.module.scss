@@ -1,0 +1,88 @@
+@import "../../styles/variables";
+
+.home {
+    position: relative;
+    row-gap: 5rem;
+    padding: 4rem 0 5rem;
+    display: grid;
+
+    &Data {
+        align-self: center;
+    }
+
+    &Title {
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.2;
+
+        &Color {
+            color: $first-color;
+        }
+    }
+
+    &Typing {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $second-color;
+        min-height: 1.6em;
+    }
+
+    &Social {
+        display: flex;
+        flex-direction: column;
+
+        &Icon {
+            width: max-content;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: $second-color;
+            transition: .3s;
+
+            &:hover {
+                color: $first-color;
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    &Img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 260px;
+    }
+
+    &Blob {
+        fill: $first-color;
+
+        &Img {
+            width: 360px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home {
+        padding: 8rem 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        &Img {
+            width: 400px;
+            bottom: 10%;
+        }
+
+        &Social {
+            padding-top: 0;
+            padding-bottom: 2.5rem;
+            flex-direction: row;
+            align-self: flex-end;
+            grid-column: 1 / 3;
+
+            &Icon {
+                margin-bottom: 0;
+                margin-right: 2rem;
+            }
+        }
+    }
+}
