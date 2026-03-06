@@ -1,16 +1,111 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🌐 Personal Portfolio Website
 
-Currently, two official plugins are available:
+A modern and responsive **developer portfolio website** built using React and Vite.
+This project showcases my skills, projects, certifications, and contact information in a clean and interactive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal of this portfolio is to present my work and technical abilities to recruiters and collaborators.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+* ⚛️ React
+* ⚡ Vite
+* 🎨 SCSS Modules
+* 🎯 React Icons
+* ✨ ScrollReveal (for scroll animations)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# 📌 Features
+
+* Responsive modern UI
+* Smooth scroll reveal animations
+* Modular SCSS styling
+* Clean component-based architecture
+* Fast build with Vite
+
+---
+
+# 📂 Website Sections
+
+The portfolio contains the following sections:
+
+### 🧭 Header / Navbar
+
+* Navigation menu for quick access to all sections
+
+### 🏠 Hero / Home
+
+* Introduction and personal branding
+
+### 👤 About
+
+* Brief overview of my background and goals
+
+### 🛠 Skills & Certificates
+
+* Technical skills
+* Certifications and achievements
+
+### 💻 Projects
+
+* Showcase of my development projects
+
+### 📬 Contact
+
+* Contact form or social links
+
+### 📄 Footer
+
+* Additional links and copyright information
+
+---
+
+# ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/M-Sufyan003/PORTFOLIO.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd PORTFOLIO
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+---
+
+# 📦 Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+# 🌍 Deployment
+
+This project can be deployed using **GitHub Pages**, Netlify, or Vercel.
+
+---
+
+# 📜 License
+
+This project is open-source and available under the MIT License.
+
