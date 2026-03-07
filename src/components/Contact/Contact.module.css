@@ -1,0 +1,59 @@
+.contact {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.contactContainer {
+  justify-items: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 560px;
+  gap: var(--mb-3);
+}
+
+.contactInput {
+  width: 100%;
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  font-weight: var(--font-semi);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--input-color);
+  outline: none;
+  background: var(--input-color);
+  color: var(--text-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  resize: vertical;
+}
+
+.contactInput::placeholder {
+  color: var(--text-color-light);
+}
+
+.contactInput:focus {
+  border-color: var(--first-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.12);
+}
+
+.contactButton {
+  width: fit-content;
+  align-self: flex-start;
+}
+
+.successMsg {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.errorMsg {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

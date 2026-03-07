@@ -1,0 +1,112 @@
+.skills {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.skillsContainer {
+  row-gap: 2rem;
+}
+
+.skillsSubtitle {
+  font-size: var(--h2-font-size);
+  color: var(--second-color);
+  margin-bottom: var(--mb-2);
+}
+
+.skillsText {
+  margin-bottom: var(--mb-4);
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+.skillsData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: var(--font-semi);
+  padding: 0.5rem 1rem;
+  margin-bottom: var(--mb-2);
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.08);
+  background: var(--container-color);
+  transition: transform 0.2s ease;
+}
+
+.skillsData:hover {
+  transform: translateX(4px);
+}
+
+.skillsNames {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.skillsIcon {
+  font-size: 1.3rem;
+  color: var(--first-color);
+  display: flex;
+  align-items: center;
+}
+
+.skillsName {
+  font-size: var(--small-font-size);
+  color: var(--second-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skillsBarTrack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.25rem;
+  background: hsl(224, 70%, 93%);
+  border-radius: 0 0 0.5rem 0.5rem;
+  overflow: hidden;
+}
+
+.skillsBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--first-color), hsl(224, 89%, 75%));
+  border-radius: 0.5rem;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skillsPercentage {
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+  font-weight: 700;
+}
+
+.skillsImgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsImg {
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 32px rgba(67, 97, 238, 0.15);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 340px;
+}
+
+.skillsImg:hover {
+  transform: translateY(-4px);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (min-width: 768px) {
+  .skillsContainer {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    align-items: center;
+  }
+}

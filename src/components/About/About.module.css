@@ -1,0 +1,73 @@
+.about {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.aboutContainer {
+  row-gap: 2rem;
+  text-align: center;
+}
+
+.aboutImgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.aboutImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid var(--first-color);
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(67, 97, 238, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.aboutImg:hover {
+  transform: scale(1.04);
+}
+
+.aboutImgFallback {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid var(--first-color);
+  background: hsl(224, 70%, 96%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(67, 97, 238, 0.18);
+}
+
+.aboutSubtitle {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi);
+  color: var(--second-color);
+  margin-bottom: var(--mb-2);
+}
+
+.aboutText {
+  margin-bottom: var(--mb-4);
+  line-height: 1.8;
+  color: var(--text-color);
+  text-align: left;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (min-width: 768px) {
+  .aboutContainer {
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2.5rem;
+    align-items: center;
+    text-align: initial;
+  }
+
+  .aboutImgWrapper {
+    justify-content: flex-start;
+  }
+}

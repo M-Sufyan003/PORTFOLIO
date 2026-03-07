@@ -1,0 +1,44 @@
+.footer {
+  background-color: var(--second-color);
+  color: #fff;
+  text-align: center;
+  font-weight: var(--font-semi);
+  padding: 2rem 0;
+}
+
+.footerTitle {
+  font-size: 2rem;
+  margin-bottom: var(--mb-4);
+  letter-spacing: 4px;
+}
+
+.footerSocial {
+  margin-bottom: var(--mb-4);
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footerIcon {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footerIcon:hover {
+  color: var(--first-color);
+  transform: translateY(-4px);
+}
+
+.footerCopy {
+  font-size: var(--small-font-size);
+  opacity: 0.7;
+}
+
+.footerCopy a {
+  color: var(--first-color);
+}
+
+.footerCopy a:hover {
+  text-decoration: underline;
+}
