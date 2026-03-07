@@ -1,31 +1,22 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
+
   const [form, setForm] = useState({ username: "", email: "", message: "" });
-  const [status, setStatus] = useState(null);
+  const [state, formspreeSubmit] = useForm("xeerojvz");
 
   const handleChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("sending");
-    try {
-      const res = await fetch("https://formspree.io/f/xldrgnag", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (res.ok) {
-        setStatus("success");
-        setForm({ username: "", email: "", message: "" });
-        setTimeout(() => setStatus(null), 4000);
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
+
+    await formspreeSubmit(form);
+
+    if (!state.errors && state.succeeded) {
+      setForm({ username: "", email: "", message: "" });
     }
   };
 
@@ -58,6 +49,12 @@ const Contact = () => {
             autoComplete="off"
           />
 
+          <ValidationError
+            prefix="Email"
+            field="email"
+            errors={state.errors}
+          />
+
           <textarea
             name="message"
             rows={10}
@@ -70,19 +67,22 @@ const Contact = () => {
             minLength={10}
           />
 
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+
           <button
             type="submit"
             className={`${styles.contactButton} button`}
-            disabled={status === "sending"}
+            disabled={state.submitting}
           >
-            {status === "sending" ? "Sending..." : "Send Message"}
+            {state.submitting ? "Sending..." : "Send Message"}
           </button>
 
-          {status === "success" && (
-            <p className={styles.successMsg}>✅ Message sent successfully!</p>
-          )}
-          {status === "error" && (
-            <p className={styles.errorMsg}>❌ Something went wrong. Please try again.</p>
+          {state.succeeded && (
+            <p className={styles.successMsg}> Message sent successfully!</p>
           )}
 
         </form>

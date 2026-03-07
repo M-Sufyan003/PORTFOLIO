@@ -62,7 +62,7 @@ const Skills = () => {
         </div>
 
         <div className={styles.skillsImgDiv}>
-          {/* Replace src with your actual image: /img/certificate.jpeg in /public */}
+
           <img
             src="/img/certificate.jpeg"
             alt="Certificate of Web Designing"

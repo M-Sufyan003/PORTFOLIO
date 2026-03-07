@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./About.module.css";
+import profileIMG from "../../../public/profileIMG.jpeg"
 
 const About = () => {
+
+  const [imgError, setImgError] = useState(false);
+
   return (
     <section className={`${styles.about} section`} id="about">
       <h2 className="section-title">About</h2>
@@ -9,15 +13,24 @@ const About = () => {
       <div className={`${styles.aboutContainer} bd-grid`}>
 
         <div className={styles.aboutImgWrapper}>
-          {/* Replace src with your actual image: /img/sufyan.jpeg in /public */}
-          <img src="/img/sufyan.jpeg" alt="Sufyan" className={styles.aboutImg}
-            onError={(e) => { e.target.style.display = "none"; }} />
-          <div className={styles.aboutImgFallback}>
-            <svg viewBox="0 0 200 200" width="140">
-              <circle cx="100" cy="70" r="45" fill="hsl(224, 89%, 60%)" />
-              <path d="M20 190 Q20 120 100 120 Q180 120 180 190 Z" fill="hsl(224, 89%, 60%)" />
-            </svg>
-          </div>
+
+          {!imgError && (
+            <img
+              src={profileIMG}
+              alt="Sufyan"
+              className={styles.aboutImg}
+              onError={() => setImgError(true)}
+            />
+          )}
+
+          {imgError && (
+            <div className={styles.aboutImgFallback}>
+              <svg viewBox="0 0 200 200" width="140">
+                <circle cx="100" cy="70" r="45" fill="hsl(224, 89%, 60%)" />
+                <path d="M20 190 Q20 120 100 120 Q180 120 180 190 Z" fill="hsl(224, 89%, 60%)" />
+              </svg>
+            </div>
+          )}
         </div>
 
         <div>

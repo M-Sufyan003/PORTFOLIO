@@ -1,5 +1,5 @@
 import React from "react";
-import { BsLinkedin, BsFacebook, BsEnvelope } from "react-icons/bs";
+import { BsLinkedin, BsFacebook, BsGithub } from "react-icons/bs";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
 
       <div className={styles.footerSocial}>
         <a
-          href="https://www.facebook.com/profile.php?id=100052799152604"
+          href="https://www.facebook.com"
           target="_blank" rel="noopener noreferrer"
           className={styles.footerIcon} title="Facebook"
         >
@@ -23,10 +23,11 @@ const Footer = () => {
           <BsLinkedin />
         </a>
         <a
-          href="mailto:sufyan@email.com"
-          className={styles.footerIcon} title="Email"
+          href="https://github.com/M-Sufyan003"
+          className={styles.footerIcon} 
+          title="GitHub"
         >
-          <BsEnvelope />
+          <BsGithub />
         </a>
       </div>
 
