@@ -1,65 +1,84 @@
 
 # 🌐 Personal Portfolio Website
 
-A modern and responsive **developer portfolio website** built using React and Vite.
-This project showcases my skills, projects, certifications, and contact information in a clean and interactive UI.
+A modern and responsive **developer portfolio website** built using **React** and **Vite**.  
+This project showcases my skills, projects, certifications, and contact information in a clean and interactive UI.  
 
 The goal of this portfolio is to present my work and technical abilities to recruiters and collaborators.
 
 ---
 
-# 🚀 Tech Stack
+# 🚀 Live Demo
 
-* ⚛️ React
-* ⚡ Vite
-* 🎨 SCSS Modules
-* 🎯 React Icons
-* ✨ ScrollReveal (for scroll animations)
+Check out the deployed website here:  
+[https://portfolioofsufyan.netlify.app/]
+
+---
+
+
+# ⚡ Tech Stack
+
+⚛️ React
+⚡ Vite
+🎨 SCSS Modules
+🎯 React Icons
+✨ ScrollReveal (for scroll animations)
 
 ---
 
 # 📌 Features
 
-* Responsive modern UI
+* Fully responsive modern UI
 * Smooth scroll reveal animations
 * Modular SCSS styling
-* Clean component-based architecture
-* Fast build with Vite
+* Component-based architecture
+* Fast build using Vite
+* Projects showcase
+* Contact form integrated
 
 ---
 
 # 📂 Website Sections
 
-The portfolio contains the following sections:
-
 ### 🧭 Header / Navbar
-
 * Navigation menu for quick access to all sections
 
 ### 🏠 Hero / Home
-
 * Introduction and personal branding
 
 ### 👤 About
-
 * Brief overview of my background and goals
 
 ### 🛠 Skills & Certificates
-
 * Technical skills
 * Certifications and achievements
 
 ### 💻 Projects
-
 * Showcase of my development projects
 
 ### 📬 Contact
-
-* Contact form or social links
+* Contact form and social links
 
 ### 📄 Footer
-
 * Additional links and copyright information
+
+---
+
+# 📁 Folder Structure (Simplified)
+
+```text
+PORTFOLIO/
+├─ public/
+│  ├─ projectIMGs/
+│  └─ index.html
+├─ src/
+│  ├─ assets/
+│  ├─ components/
+│  ├─ pages/
+│  └─ App.jsx
+├─ package.json
+└─ vite.config.js
+````
 
 ---
 
@@ -83,11 +102,13 @@ Install dependencies:
 npm install
 ```
 
-Run development server:
+Run the development server:
 
 ```bash
 npm run dev
 ```
+
+The app should open at `http://localhost:5173`.
 
 ---
 
@@ -97,15 +118,26 @@ npm run dev
 npm run build
 ```
 
+The production-ready files will be in the `dist` folder.
+
 ---
 
 # 🌍 Deployment
 
-This project can be deployed using **GitHub Pages**, Netlify, or Vercel.
+This project can be deployed using **Netlify**, **Vercel**, or **GitHub Pages**.
+
+> ⚠️ If using **React Router** with Vite, make sure to add a `_redirects` file in the `public` folder:
+
+```text
+/* /index.html 200
+```
+
+This prevents 404 errors on page refresh.
 
 ---
 
 # 📜 License
 
-This project is open-source and available under the MIT License.
+This project is open-source and available under the **MIT License**.
 
+```
